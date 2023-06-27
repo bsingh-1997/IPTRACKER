@@ -1,0 +1,11 @@
+.imgimg {
+    margin: 1vh 0px;
+    width: 25vw;
+}
+@media screen and (max-width:600px) {
+    
+    .imgimg{
+        margin: 7vh 0px;
+        width: 93vw;
+    }
+}

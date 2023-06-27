@@ -13,16 +13,27 @@ const Home = () => {
     const[det3,setdet3]= useState([])
 
     const fetchdata =async()=>{
-        const data = await axios.get('https://api.ipify.org/?format=json')
-    setdet(data.data)
-    setloading((false))}
+        try {
+            const data = await axios.get('https://api.ipify.org/?format=json')
+            setdet(data.data)
+            setloading((false))
+            
+        } catch (error) {
+            SetError(true)
+        }
+}
 
     const fetchipdata =async()=>{
         // const data = await axios.get('https://ipinfo.io/192.168.0.1/geo')
+        try {
         const data = await axios.get(`https://ipinfo.io/${det.ip}?token=23bd1e38ddeb09`)
         console.log(data)
         setdet2(data.data)
         setloading(false)
+            
+        } catch (error) {
+            SetError(true)
+        }
     }
     const fetchipdata2 =async()=>{
         try {

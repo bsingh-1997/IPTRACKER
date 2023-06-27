@@ -1,10 +1,12 @@
 import React from 'react'
-
+import './error.css'
 const error = () => {
   return (
     <div>
    <h4>Fetching Data Failed
      </h4>   
+    <br></br>
+    <img className='imgimg' src='https://ieeemait.com/images/error.gif'/>
     <br></br>
     Here are few possible reasons:
     
