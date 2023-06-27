@@ -1,0 +1,33 @@
+.maincom{
+    margin: 9vh 0;
+}
+input{
+    margin-top: 40px;
+    height: 24px;
+    width: 250px;
+    border: 0.2px solid grey;
+    border-radius: 7px;
+    margin-right: 20px;
+}
+button{
+    border: 0.2px solid grey;
+    border-radius: 7px;
+    height: 26px;
+    background-color: white;
+    box-shadow:  3px 4px 6px rgb(149, 149, 149);
+}
+.ip{
+    margin-bottom: 10px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    transition: 0.5s;
+}
+.detailz{
+    margin-top: 70px;
+}
+p{
+    margin: 0 20vw;
+}
