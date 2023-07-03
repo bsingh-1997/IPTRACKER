@@ -76,12 +76,12 @@ const Home = () => {
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        {/* <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
-        </li>
+        </li> */}
         {/* <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -120,13 +120,13 @@ const Home = () => {
         {errorr?<Error/>:<>
         {det2.length<=0?<h5>Enter any ip adress to get details here</h5>:<><h4>Here are the details of entered ip</h4>
         {loading?<Loader/>:<>
-        <div>{det2.city}</div>
-        <div>{det2.country}</div>
-        <div>{det2.ip}</div>
-        <div>{det2.loc}</div>
-        <div>{det2.org}</div>
-        <div>{det2.postal}</div>
-        <div>{det2.reigon}</div>
+        <div>City: {det2.city}</div>
+        <div>Country: {det2.country}</div>
+        <div>IP Adress: {det2.ip}</div>
+        <div>Location: {det2.loc}</div>
+        <div>Company: {det2.org}</div>
+        <div>Postal Code: {det2.postal}</div>
+        <div>Reigon: {det2.reigon}</div>
         <div>{det2.timezone}</div>
         </>}
             </>}
