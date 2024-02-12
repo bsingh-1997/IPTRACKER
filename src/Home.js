@@ -68,57 +68,22 @@ const Home = () => {
 
   return (
     <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">IP Tracker</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        {/* <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li> */}
-        {/* <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> */}
-        {/* <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul> */}
-      </ul>
-      {/* <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> */}
-    </div>
-  </div>
-</nav>
+        <div className='bg'></div>
         {loading?<Loader/>:
         <div className='maincom'>
             <h4>IP TRACKER</h4>
+      <br></br>
+
+      <input placeholder='Search for any IP adress' value={det3} onChange={dett3val}/>
+      <button className='button1' onClick={clickmydet2} >Search</button>
+      <br></br>
       <div className='ip'>Your IP adress is : {det.ip}</div>
-      <button onClick={clickmydet} >Find details of your ip</button>
+      <button className='button2' onClick={clickmydet} >Get details of your own IP</button>
       <br></br>
       
-      <br></br>
-      <input placeholder='enter a ip adress to get detaails' value={det3} onChange={dett3val}/>
-      <button onClick={clickmydet2} >get details</button>
-      <br></br>
       <div className='detailz'>
         {errorr?<Error/>:<>
-        {det2.length<=0?<h5>Enter any ip adress to get details here</h5>:<><h4>Here are the details of entered ip</h4>
+        {det2.length<=0?<h5>Search for any IP to get details here</h5>:<><h4>Here are the details of entered ip</h4>
         {loading?<Loader/>:<>
         <div>City: {det2.city}</div>
         <div>Country: {det2.country}</div>
@@ -133,9 +98,9 @@ const Home = () => {
         
      </>}</div>
         
+     <p>IPTracker is a powerful website that provides you with accurate and comprehensive information about IP addresses. With IPTracker, you can effortlessly discover your own IP address and gain insights into various details associated with it. Additionally, you have the option to manually enter any IP address and instantly retrieve detailed information about it, including geolocation data, ISP, organization, time zone, and more. Whether you need to track your own IP or investigate specific IP addresses, IPTracker simplifies the process, empowering you with valuable insights and enhancing your understanding of IP-related information. Stay informed and explore the world of IP addresses with ease using IPTracker.</p>
          </div>
     }
-        <p>IPTracker is a powerful website that provides you with accurate and comprehensive information about IP addresses. With IPTracker, you can effortlessly discover your own IP address and gain insights into various details associated with it. Additionally, you have the option to manually enter any IP address and instantly retrieve detailed information about it, including geolocation data, ISP, organization, time zone, and more. Whether you need to track your own IP or investigate specific IP addresses, IPTracker simplifies the process, empowering you with valuable insights and enhancing your understanding of IP-related information. Stay informed and explore the world of IP addresses with ease using IPTracker.</p>
      </div>
    )
 }
